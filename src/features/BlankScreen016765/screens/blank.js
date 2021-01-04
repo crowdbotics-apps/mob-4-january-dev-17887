@@ -24,14 +24,24 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = { TextInput_4: "" }
 
   render = () => (
     <View>
       <Text>Sample text content</Text>
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        value={this.state.TextInput_4}
+        onChangeText={nextValue => this.setState({ TextInput_4: nextValue })}
+      />
     </View>
   )
 }
 
-const styles = StyleSheet.create({ View_1: {}, Text_2: {}, Button_3: {} })
+const styles = StyleSheet.create({
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {}
+})
